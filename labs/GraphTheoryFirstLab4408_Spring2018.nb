@@ -1,0 +1,738 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 6.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[     27129,        730]
+NotebookOptionsPosition[     23453,        648]
+NotebookOutlinePosition[     23885,        665]
+CellTagsIndexPosition[     23842,        662]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[{
+ "First Interactive Lab for CSCI 4408/5408 \n\n",
+ StyleBox["Place your cursor on the vertical line farthest to the right, \
+single click,  and once that line  becomes ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["highlighted",
+  FontSlant->"Italic"],
+ StyleBox[", then double click to open the ",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox["Mathematica",
+  FontSlant->"Italic",
+  FontColor->RGBColor[0, 0, 1]],
+ StyleBox[" Notebook.\n",
+  FontColor->RGBColor[0, 0, 1]]
+}], "Subsubsection",
+ CellChangeTimes->{{3.411047365304254*^9, 3.4110473676383257`*^9}, {
+  3.434669037951873*^9, 3.434669043827929*^9}, {3.442357240798155*^9, 
+  3.442357248120517*^9}, {3.5048797660322933`*^9, 3.5048797706461277`*^9}, {
+  3.6006329147632437`*^9, 3.6006329171472588`*^9}, {3.632070167761559*^9, 
+  3.632070169797985*^9}, {3.726754870737636*^9, 3.726754872155196*^9}},
+ FontSize->36,ExpressionUUID->"c9e72aa8-c6a4-4320-837f-fcf2778f81e7"],
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  StyleBox[
+   RowBox[{"(*", " ", 
+    RowBox[{
+    "All", " ", "of", " ", "the", " ", "gray", " ", "text", " ", "represents",
+      " ", "comments", " ", "contained", " ", "within", " ", "an", " ", 
+     "active", " ", "cell"}], " ", "*)"}],
+   FontColor->RGBColor[1, 0, 0]]}]], "Input",
+ CellChangeTimes->{{3.4110475478422747`*^9, 3.411047564966535*^9}, 
+   3.5048798829562483`*^9, {3.632069984499984*^9, 
+   3.6320699893479652`*^9}},ExpressionUUID->"014e6d63-20ab-46ab-8efc-\
+fb9a5627256b"],
+
+Cell[TextData[{
+ "Place your cursor inside the \"cell\" below, ",
+ StyleBox["click once",
+  FontSlant->"Italic"],
+ ", and then press ",
+ StyleBox["Shift",
+  FontWeight->"Bold"],
+ " and ",
+ StyleBox["Return ",
+  FontWeight->"Bold"],
+ "at the same time ",
+ StyleBox["(",
+  FontWeight->"Bold"],
+ "or just press",
+ StyleBox[" Enter ",
+  FontWeight->"Bold"],
+ "on the numeric keypad",
+ StyleBox[")",
+  FontWeight->"Bold"],
+ ". "
+}], "Text",
+ CellChangeTimes->{{3.4110474963392153`*^9, 3.411047538574357*^9}, {
+  3.4110480552715797`*^9, 3.411048060117902*^9}, {3.50557100027206*^9, 
+  3.505571021434067*^9}, {3.600632948396307*^9, 3.600632964472888*^9}},
+ FontSize->24,ExpressionUUID->"fea038a3-ba2b-43bc-8c02-a6d4000382da"],
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Map", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"#", "=", 
+        RowBox[{"ColorData", "[", 
+         RowBox[{"\"\<Legacy\>\"", ",", 
+          RowBox[{"ToString", "[", "#", "]"}]}], "]"}]}], ")"}], "&"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "GoldenRod", ",", "Olive", ",", "DarkKhaki", ",", "Wheat", ",", 
+       "Raspberry", ",", "IndianRed", ",", "Indigo", ",", "ForestGreen"}], 
+      "}"}]}], "]"}], ";"}]}]], "Input",
+ CellChangeTimes->{{3.504879810211115*^9, 3.504879813214389*^9}, {
+   3.5055710371490583`*^9, 3.505571056067521*^9}, {3.5055711046910152`*^9, 
+   3.505571107240744*^9}, 
+   3.600632937983549*^9},ExpressionUUID->"208763a9-a39f-4d34-955d-\
+f15f48efeed5"],
+
+Cell[TextData[{
+ "\nCongratulations: you've just initiated the ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " Kernel. Please read on.\n      \n      "
+}], "Text",
+ FontSize->24,ExpressionUUID->"263bb9d8-0f20-4d2c-8e9b-c946f0a6b807"],
+
+Cell[TextData[{
+ "This cell and the two typeset ones above represent another way to make \
+comments: I used the menu commands given by Format->Style->Text while the \
+bracket (a bracket is a cell)  to the right of this sentence was highlighted. \
+I got the right arrow by using the menu command\n\n Palettes\[Rule]Classroom \
+Assistant\n\nand then I clicked  on the right arrow icon. Here are a few more \
+such symbols  \[Degree] \[ImaginaryI] \[Infinity] \[Pi]  (you can also use \
+any of the other palettes to find other nifty symbols).\n\nThere are many \
+more such symbols. If you write up your homework as a ",
+ StyleBox["Mathematica ",
+  FontSlant->"Italic"],
+ "file (also called a ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " notebook) you'll want to get to know how to typeset a paragraph like this \
+one. Don't evaluate this cell! ",
+ StyleBox["But please evalutate the next sequence of cells to start getting \
+used to drawing graphs",
+  FontWeight->"Bold"],
+ ". In particular, place your cursor inside the next cell, click once, and \
+then press",
+ StyleBox[" Shift",
+  FontWeight->"Bold"],
+ " and ",
+ StyleBox["Enter",
+  FontWeight->"Bold"],
+ " at the same time."
+}], "Text",
+ CellChangeTimes->{{3.50557071924704*^9, 3.505570742714349*^9}, {
+  3.505570847608397*^9, 3.5055709588523207`*^9}, {3.600633101412649*^9, 
+  3.6006331265846863`*^9}},
+ FontSize->18,ExpressionUUID->"cc8feddf-dfaf-46b5-b682-f418c7d792c5"],
+
+Cell[BoxData[
+ RowBox[{"myFirstGraph", "=", 
+  RowBox[{"CompleteGraph", "[", "3", "]"}]}]], "Input",
+ CellChangeTimes->{{3.6004612668144083`*^9, 3.600461272732232*^9}, {
+  3.6006331478492527`*^9, 3.6006331495525217`*^9}},
+ FontSize->16,ExpressionUUID->"3bb33b51-e346-4f15-ac3e-85ffea93f63d"],
+
+Cell["", "Text",
+ CellChangeTimes->{3.600461298338456*^9},
+ FontSize->16,ExpressionUUID->"b1694258-0af5-463e-8b37-54e67e96f632"],
+
+Cell[BoxData[
+ RowBox[{"GraphPlot", "[", "myFirstGraph", "]"}]], "Input",
+ CellChangeTimes->{{3.600461316708*^9, 3.600461350695427*^9}},
+ FontSize->18,ExpressionUUID->"5ccc0378-251f-413c-97b5-402f67640cfe"],
+
+Cell[BoxData[
+ RowBox[{"Notice", " ", "that", " ", 
+  RowBox[{"we", "'"}], "ve", " ", "seen", " ", "two", " ", "ways", " ", "to", 
+  " ", "draw", " ", "a", " ", 
+  SubscriptBox["K", 
+   RowBox[{"3", "   "}]], "using", " ", 
+  StyleBox["Graph",
+   FontWeight->"Bold"], " ", "and", " ", "also", " ", 
+  RowBox[{
+   StyleBox["GraphPlot",
+    FontWeight->"Bold"], 
+   StyleBox[".",
+    FontWeight->"Bold"], 
+   StyleBox[" ",
+    FontWeight->"Bold"], 
+   StyleBox["Please",
+    FontWeight->"Plain"]}], 
+  StyleBox[" ",
+   FontWeight->"Plain"], 
+  StyleBox["evaluate",
+   FontWeight->"Plain"], 
+  StyleBox[" ",
+   FontWeight->"Plain"], 
+  StyleBox["the",
+   FontWeight->"Plain"], 
+  StyleBox[" ",
+   FontWeight->"Plain"], 
+  StyleBox["next",
+   FontWeight->"Plain"], 
+  StyleBox[" ",
+   FontWeight->"Plain"], 
+  StyleBox["cell",
+   FontWeight->"Plain"], 
+  StyleBox[" ",
+   FontWeight->"Plain"], 
+  StyleBox["to",
+   FontWeight->"Plain"], 
+  StyleBox[" ",
+   FontWeight->"Plain"], 
+  StyleBox[
+   RowBox[{"continue", ".", " "}],
+   FontWeight->"Plain"]}]], "Text",
+ CellChangeTimes->{{3.600633164776202*^9, 3.600633216230562*^9}, {
+  3.600633261380559*^9, 3.600633311591641*^9}},
+ FontFamily->"Arial",ExpressionUUID->"88fd97e1-eccd-444d-b3c3-ab4a5505bcb5"],
+
+Cell[BoxData[
+ RowBox[{"mySecondGraph", "=", 
+  RowBox[{"CompleteGraph", "[", "6", "]"}]}]], "Input",
+ FontSize->16,ExpressionUUID->"240b8538-aaae-4e8b-81f5-c4422a9d89ab"],
+
+Cell["\<\
+(The output cell announces that you have created an undirected graph with six \
+vertices and 15 edges but with no information about the labeling of the \
+vertices.)\
+\>", "Text",
+ CellChangeTimes->{{3.600633330734643*^9, 3.600633355892091*^9}},
+ FontSize->16,ExpressionUUID->"a1642d2a-6b0c-4a39-936f-0e0de8dd4300"],
+
+Cell[BoxData[
+ RowBox[{"Graph", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"1", "\[UndirectedEdge]", "2"}], ",", 
+     RowBox[{"2", "\[UndirectedEdge]", "3"}], ",", 
+     RowBox[{"1", "\[UndirectedEdge]", "3"}]}], "}"}], ",", 
+   RowBox[{"VertexLabels", "\[Rule]", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"i", "\[Rule]", 
+       SubscriptBox["v", "i"]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "3"}], "}"}]}], "]"}]}], ",", 
+   RowBox[{"VertexLabelStyle", "\[Rule]", 
+    RowBox[{"Directive", "[", 
+     RowBox[{"Red", ",", "Italic", ",", "40"}], "]"}]}], ",", 
+   RowBox[{"ImagePadding", "\[Rule]", "30"}]}], "]"}]], "Input",
+ CellChangeTimes->{3.600633603851556*^9},
+ FontSize->16,ExpressionUUID->"aa4325ae-9fd7-4c91-a431-8e85ebdcd974"],
+
+Cell[TextData[{
+ "Well, I don't really like the fact that the vertex labels are off to the \
+side of the vertices, so we'll fix that by using another graph option within \
+the ",
+ StyleBox["CompleteGraph ",
+  FontWeight->"Bold"],
+ "command. And while we\[CloseCurlyQuote]re at it, let\[CloseCurlyQuote]s \
+change the sizes and colors of the vertices. Here goes."
+}], "Text",
+ CellChangeTimes->{{3.6006338281879807`*^9, 3.6006338416581078`*^9}, {
+  3.600634618721745*^9, 3.6006346350956182`*^9}},
+ FontSize->16,ExpressionUUID->"577f6145-fd9c-46a5-9c56-58e9329d512b"],
+
+Cell[BoxData[
+ RowBox[{"CompleteGraph", "[", 
+  RowBox[{"3", ",", 
+   RowBox[{"VertexLabels", "\[Rule]", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"i", "\[Rule]", 
+       RowBox[{"Placed", "[", 
+        RowBox[{
+         SubscriptBox["v", "i"], ",", "Center"}], "]"}]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "3"}], "}"}]}], "]"}]}], ",", 
+   RowBox[{"VertexSize", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"1", "\[Rule]", "Tiny"}], ",", 
+      RowBox[{"2", "\[Rule]", "Medium"}], ",", 
+      RowBox[{"3", "\[RightArrow]", ".9"}]}], "}"}]}], ",", 
+   RowBox[{"ImagePadding", "\[Rule]", "40"}]}], "]"}]], "Input",
+ CellChangeTimes->{
+  3.411047652582567*^9, {3.600633847212083*^9, 3.60063392206609*^9}, {
+   3.600633984424677*^9, 3.6006340082933903`*^9}, {3.600634286006814*^9, 
+   3.60063430967749*^9}, {3.600634351602572*^9, 3.600634463963509*^9}, {
+   3.600634566775985*^9, 3.600634604924307*^9}},
+ FontSize->16,ExpressionUUID->"9ba526b1-faaa-469e-aa58-f3f7bf0a17e7"],
+
+Cell["", "Text",
+ CellChangeTimes->{3.600634995207562*^9},
+ FontSize->16,ExpressionUUID->"b2799cb0-1508-47ab-afca-aec913a786d8"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{3.41104817516264*^9, 3.600635000374154*^9},
+ FontSize->16,ExpressionUUID->"34e1b2b5-91b3-4e71-8705-2f0522116ea3"],
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+   "Now", " ", "modify", " ", "the", " ", "above", " ", "command", " ", "to", 
+    " ", "make", " ", "the", " ", 
+    SubscriptBox["K", "6"], " ", "more", " ", "aesthetic", " ", "and", " ", 
+    RowBox[{"informative", ".", " ", "Feel"}], " ", "free", " ", "also"}], 
+   ",", " ", 
+   RowBox[{
+   "to", " ", "use", " ", "the", " ", "help", " ", "menu", " ", "to", " ", 
+    "use", " ", "the", " ", "many", " ", "options", " ", "available", " ", 
+    "for", " ", "graph", " ", 
+    RowBox[{"drawing", ".", " "}]}]}]}]], "Text",
+ CellChangeTimes->{
+  3.600635015397668*^9, {3.600637932891708*^9, 3.600638005788414*^9}},
+ FontFamily->"Times",
+ FontSize->16,ExpressionUUID->"ef843309-addd-450a-8005-1c5a02868522"],
+
+Cell[BoxData[
+ RowBox[{"listOfCompleteGraphs", "=", 
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"CompleteGraph", "[", 
+     RowBox[{"i", ",", 
+      RowBox[{"VertexStyle", "\[Rule]", "IndianRed"}], ",", 
+      RowBox[{"VertexSize", "\[Rule]", 
+       RowBox[{"{", "Medium", "}"}]}], ",", 
+      RowBox[{"Background", "\[Rule]", "Purple"}], ",", 
+      RowBox[{"EdgeStyle", "\[Rule]", "Green"}], ",", 
+      RowBox[{"ImagePadding", "\[Rule]", "30"}]}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"i", ",", "1", ",", "6"}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.600465003929088*^9, 3.600465044882901*^9}, {
+   3.600635028301132*^9, 3.6006350339966927`*^9}, {3.600635161031596*^9, 
+   3.600635343610777*^9}, {3.60063561534165*^9, 3.600635749712442*^9}, 
+   3.600635784012929*^9, {3.6006358421946793`*^9, 3.600635868183732*^9}, {
+   3.600635908599972*^9, 3.600635960891182*^9}, {3.6006360452236834`*^9, 
+   3.6006360644144077`*^9}, {3.600636095116434*^9, 3.600636154143415*^9}},
+ FontSize->16,ExpressionUUID->"b1f2c629-7bed-49c1-a5c7-684acdefa2e8"],
+
+Cell[TextData[{
+ "Er, you may want to pick your own colors. Next I'm going to display all six \
+graphs using the ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " commands called ",
+ StyleBox["Show",
+  FontWeight->"Bold"],
+ " and ",
+ StyleBox["GraphicsGrid. ",
+  FontWeight->"Bold"],
+ StyleBox["Hang on to your hats. Note that \"listOfCompleteGraphs[[i]]\" is \
+the ",
+  FontWeight->"Plain"],
+ StyleBox["ith ",
+  FontWeight->"Plain",
+  FontSlant->"Italic"],
+ StyleBox["graph in the List Of Complete Graphs.\n\n",
+  FontWeight->"Plain"]
+}], "Text",
+ CellChangeTimes->{{3.5057404121216097`*^9, 3.505740416208211*^9}},
+ FontSize->16,ExpressionUUID->"501959b5-5bb1-4f8d-b76f-a745989130e5"],
+
+Cell[BoxData[
+ RowBox[{"Show", "[", 
+  RowBox[{
+   RowBox[{"GraphicsGrid", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{
+        "listOfCompleteGraphs", "\[LeftDoubleBracket]", "1", 
+         "\[RightDoubleBracket]"}], ",", 
+        RowBox[{
+        "listOfCompleteGraphs", "\[LeftDoubleBracket]", "2", 
+         "\[RightDoubleBracket]"}], ",", 
+        RowBox[{
+        "listOfCompleteGraphs", "\[LeftDoubleBracket]", "3", 
+         "\[RightDoubleBracket]"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{
+        "listOfCompleteGraphs", "\[LeftDoubleBracket]", "4", 
+         "\[RightDoubleBracket]"}], ",", 
+        RowBox[{
+        "listOfCompleteGraphs", "\[LeftDoubleBracket]", "5", 
+         "\[RightDoubleBracket]"}], ",", 
+        RowBox[{
+        "listOfCompleteGraphs", "\[LeftDoubleBracket]", "6", 
+         "\[RightDoubleBracket]"}]}], "}"}]}], "}"}], "]"}], ",", 
+   RowBox[{"ImageSize", "\[Rule]", "800"}]}], "]"}]], "Input",
+ FontSize->16,ExpressionUUID->"14bcccef-6aaf-4330-a390-8ddfaef397a1"],
+
+Cell["\<\
+Or perhaps you would prefer a 2 x 3 display, like this-- evaluate the next \
+cell.\
+\>", "Text",
+ FontSize->16,ExpressionUUID->"0fe4c4f3-a0cc-4882-970d-52f9bf7ad543"],
+
+Cell[BoxData[
+ RowBox[{"Show", "[", 
+  RowBox[{
+   RowBox[{"GraphicsGrid", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{
+        "listOfCompleteGraphs", "\[LeftDoubleBracket]", "1", 
+         "\[RightDoubleBracket]"}], ",", 
+        RowBox[{
+        "listOfCompleteGraphs", "\[LeftDoubleBracket]", "2", 
+         "\[RightDoubleBracket]"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{
+        "listOfCompleteGraphs", "\[LeftDoubleBracket]", "3", 
+         "\[RightDoubleBracket]"}], ",", 
+        RowBox[{
+        "listOfCompleteGraphs", "\[LeftDoubleBracket]", "4", 
+         "\[RightDoubleBracket]"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{
+        "listOfCompleteGraphs", "\[LeftDoubleBracket]", "5", 
+         "\[RightDoubleBracket]"}], ",", 
+        RowBox[{
+        "listOfCompleteGraphs", "\[LeftDoubleBracket]", "6", 
+         "\[RightDoubleBracket]"}]}], "}"}]}], "}"}], "]"}], ",", 
+   RowBox[{"ImageSize", "\[Rule]", "800"}]}], "]"}]], "Input",
+ FontSize->16,ExpressionUUID->"89dcc2aa-c46c-464c-99d5-a117fba5b06c"],
+
+Cell[TextData[{
+ "Onward and upward. To display the complete bipartite graph ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["K", 
+    RowBox[{"m", ",", "n"}]], TraditionalForm]],ExpressionUUID->
+  "bec43335-f4cf-451e-b28f-7eda7e736da2"],
+ "see the cell below. I made an example of ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["K", 
+    RowBox[{"3", ",", "3"}]], TraditionalForm]],ExpressionUUID->
+  "51cf5fce-3955-4f2a-a9fe-aec9a4a46ec8"],
+ ", which is the",
+ StyleBox[" graph corresponding the the utilities problem",
+  FontSlant->"Italic"],
+ ". Experiment with the ",
+ StyleBox["CompleteGraph",
+  FontWeight->"Bold"],
+ " command to create, for example, tripartite graphs, or for that matter \
+n-partite graphs."
+}], "Text",
+ CellChangeTimes->{{3.600637741123761*^9, 3.600637790718918*^9}},
+ FontSize->16,ExpressionUUID->"760319ce-5390-49bb-b8f2-0e67420c58f4"],
+
+Cell[BoxData[
+ RowBox[{"CompleteGraph", "[", 
+  RowBox[{"{", 
+   RowBox[{"3", ",", "3"}], "}"}], "]"}]], "Input",
+ CellChangeTimes->{{3.505740444953158*^9, 3.5057404486396723`*^9}, {
+  3.6006361925982113`*^9, 3.600636216739852*^9}},
+ FontSize->16,ExpressionUUID->"c80e1a7e-34c6-4180-93b5-13e06970abd3"],
+
+Cell["\<\
+And just for fun, here is a command you might have liked to know about for \
+the first homework and quiz. Evaluate the next  cell and decide, based on the \
+evidence, what this command accomplishes and then experiment further. \
+\>", "Text",
+ CellChangeTimes->{{3.600636379767005*^9, 3.600636450254405*^9}, {
+  3.600636691633589*^9, 3.600636705272974*^9}, {3.6006378446359587`*^9, 
+  3.600637863642502*^9}},ExpressionUUID->"5b2b53d0-d909-4a65-a34d-\
+43fb10208e1d"],
+
+Cell[BoxData[
+ RowBox[{"IsomorphicGraphQ", "[", 
+  RowBox[{
+   RowBox[{"CompleteGraph", "[", "5", "]"}], ",", 
+   RowBox[{"CycleGraph", "[", "5", "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.600636459479926*^9, 3.6006364728616962`*^9}, {
+  3.6006365555474367`*^9, 3.6006365602169037`*^9}, {3.600636639134138*^9, 
+  3.6006366774682293`*^9}},ExpressionUUID->"4306a32c-5c00-4189-8f7a-\
+48ee3cac43ec"],
+
+Cell[TextData[{
+ "Finally for this lab, I'll draw a graph with a prescribed set of edges and \
+vertex locations, which is what you will need to be able to do to display \
+some of your homework answers.  The (undirected) graph's name is",
+ StyleBox[" G",
+  FontSlant->"Italic"],
+ ", with |V(",
+ StyleBox["G",
+  FontSlant->"Italic"],
+ ")|=9 and E(",
+ StyleBox["G",
+  FontSlant->"Italic"],
+ ")={{1,3},{2,4},{3,5},{4,6},{3,4},{7,8}}, and the cartesian coordinates (in \
+order) of each vertex are given by \
+{{0,20},{10,20},{0,10},{10,10},{0,0},{10,0},{20,15},{20,0},{20,20}}. Evaluate \
+the the sequence of commands below to see a picture of my special graph."
+}], "Text",
+ CellChangeTimes->{{3.6006378129040823`*^9, 3.6006378148215237`*^9}},
+ FontSize->16,ExpressionUUID->"726fb744-32e3-435f-aa72-791d5dbf8796"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Clear", "[", 
+   RowBox[{"specialEdges", ",", "specialVertexLocations"}], "]"}], ";", 
+  RowBox[{"specialEdges", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"1", "\[UndirectedEdge]", "3"}], ",", 
+     RowBox[{"2", "\[UndirectedEdge]", "4"}], ",", 
+     RowBox[{"3", "\[UndirectedEdge]", "5"}], ",", 
+     RowBox[{"4", "\[UndirectedEdge]", "6"}], ",", 
+     RowBox[{"3", "\[UndirectedEdge]", "4"}], ",", 
+     RowBox[{"7", "\[UndirectedEdge]", "8"}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"specialVertexLocations", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"1", "->", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", "20"}], "}"}]}], ",", 
+     RowBox[{"2", "->", 
+      RowBox[{"{", 
+       RowBox[{"10", ",", "20"}], "}"}]}], ",", 
+     RowBox[{"3", "->", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", "10"}], "}"}]}], ",", 
+     RowBox[{"4", "->", 
+      RowBox[{"{", 
+       RowBox[{"10", ",", "10"}], "}"}]}], ",", 
+     RowBox[{"5", "->", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", "0"}], "}"}]}], ",", 
+     RowBox[{"6", "->", 
+      RowBox[{"{", 
+       RowBox[{"10", ",", "0"}], "}"}]}], ",", 
+     RowBox[{"7", "->", 
+      RowBox[{"{", 
+       RowBox[{"20", ",", "15"}], "}"}]}], ",", 
+     RowBox[{"8", "->", 
+      RowBox[{"{", 
+       RowBox[{"20", ",", "0"}], "}"}]}], ",", 
+     RowBox[{"9", "->", 
+      RowBox[{"{", 
+       RowBox[{"20", ",", "20"}], "}"}]}]}], "}"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.60063679271212*^9, 3.600636866378536*^9}, {
+  3.600637270168241*^9, 3.600637310506654*^9}},
+ FontSize->16,ExpressionUUID->"7e281a1b-fec5-4f2a-b11e-7032066ecd2d"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"specialGraphTemp", "=", 
+   RowBox[{"Graph", "[", "specialEdges", "]"}]}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", 
+  StyleBox[
+   RowBox[{"(*", " ", 
+    RowBox[{"Hmm", ",", " ", 
+     RowBox[{
+     "what", " ", "does", " ", "the", " ", "graph", " ", "look", " ", "like", 
+      " ", "so", " ", 
+      RowBox[{"far", "?"}]}]}], " ", "*)"}],
+   FontColor->RGBColor[1, 0, 0]], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.600636876946197*^9, 3.6006369034256163`*^9}},
+ FontSize->16,ExpressionUUID->"bd8fed5a-1bce-42b6-b607-72ef6187b828"],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"(*", " ", 
+    RowBox[{
+     RowBox[{"Now", " ", 
+      RowBox[{"I", "'"}], "ll", " ", "change", " ", "the", " ", "position", 
+      " ", "of", " ", "the", " ", "vertices", " ", "and", " ", 
+      RowBox[{"I", "'"}], "ll", " ", "use", " ", "the", " ", "command", " ", 
+      "GraphPlot", " ", 
+      RowBox[{"instead", ".", " ", "To"}], " ", "do", " ", "so"}], ",", " ", 
+     RowBox[{
+      RowBox[{"I", "'"}], "ll", " ", "need", " ", "to", " ", "change", " ", 
+      "the", " ", "format", " ", "of", " ", "specialEdges"}]}], " ", "*)"}],
+   FontColor->RGBColor[1, 0, 0]], 
+  StyleBox["\[IndentingNewLine]",
+   FontColor->RGBColor[1, 0, 0]], 
+  StyleBox["\[IndentingNewLine]",
+   FontColor->RGBColor[1, 0, 0]], 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Clear", "[", "specialEdges", "]"}], ";", 
+    RowBox[{"specialEdges", 
+     StyleBox["=",
+      FontColor->GrayLevel[0]], 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"1", "->", "3"}], ",", 
+       RowBox[{"2", "->", "4"}], ",", 
+       RowBox[{"3", "->", "5"}], ",", 
+       RowBox[{"4", "->", "6"}], ",", 
+       RowBox[{"3", "->", "4"}], ",", 
+       RowBox[{"7", "->", "8"}]}], "}"}]}], ";"}], 
+   StyleBox["\[IndentingNewLine]",
+    FontColor->GrayLevel[0]], 
+   StyleBox["\[IndentingNewLine]",
+    FontColor->GrayLevel[0]], 
+   StyleBox["\[IndentingNewLine]",
+    FontColor->GrayLevel[0]], 
+   RowBox[{"GraphPlot", "[", 
+    RowBox[{"specialEdges", ",", 
+     RowBox[{"VertexCoordinateRules", "\[Rule]", "specialVertexLocations"}]}],
+     "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.600637171403723*^9, 3.600637225595441*^9}, {
+  3.600637384760771*^9, 3.6006374831687098`*^9}, {3.600637563212668*^9, 
+  3.600637581498851*^9}},
+ FontSize->16,ExpressionUUID->"24cee59e-1971-4297-93ff-c608fe49daf6"],
+
+Cell[TextData[StyleBox["",
+ FontWeight->"Plain"]], "Text",
+ CellChangeTimes->{{3.411047878112648*^9, 3.411047884815156*^9}, {
+   3.600636967960373*^9, 3.600636976994479*^9}, 3.600637674144001*^9},
+ FontSize->16,ExpressionUUID->"22d0c02a-c51f-489b-95a0-0245208ed7ca"],
+
+Cell[TextData[{
+ StyleBox["Appendix",
+  FontWeight->"Bold"],
+ "\n\nBuilt-in ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " Items Covered in this Session:\n      \n\nLoad the ",
+ StyleBox["Colors",
+  FontWeight->"Bold"],
+ " that I like to use\nText Typsetting within a ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " notebook\n",
+ StyleBox["GraphPlot\nGraph",
+  FontWeight->"Bold"],
+ "\n",
+ StyleBox["CompleteGraph",
+  FontWeight->"Bold"],
+ "\n",
+ StyleBox["Table\nClear\nGraphicsGrid\nGraphicsRow\nShow\nIsomorphicQ\n",
+  FontWeight->"Bold"]
+}], "Text",
+ CellChangeTimes->{{3.4110480299884377`*^9, 3.411048032453827*^9}, {
+  3.411048248985628*^9, 3.4110482606448727`*^9}, {3.411048330865296*^9, 
+  3.411048366941334*^9}, {3.505571284098827*^9, 3.5055712863115883`*^9}, {
+  3.6006367239704323`*^9, 3.60063674007891*^9}, {3.6006375358382483`*^9, 
+  3.600637541124055*^9}, {3.600637604561866*^9, 3.600637609849222*^9}},
+ FontSize->24,ExpressionUUID->"e5cd819d-2d90-4f9c-af4e-71607788019b"]
+}, Closed]]
+},
+WindowSize->{1189, 748},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+PrivateNotebookOptions->{"VersionedStylesheet"->{"Default.nb"[8.] -> False}},
+FrontEndVersion->"11.1 for Mac OS X x86 (32-bit, 64-bit Kernel) (April 27, \
+2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[567, 22, 941, 20, 275, "Subsubsection", "ExpressionUUID" -> \
+"c9e72aa8-c6a4-4320-837f-fcf2778f81e7"],
+Cell[1511, 44, 540, 12, 46, "Input", "ExpressionUUID" -> \
+"014e6d63-20ab-46ab-8efc-fb9a5627256b"],
+Cell[2054, 58, 718, 24, 73, "Text", "ExpressionUUID" -> \
+"fea038a3-ba2b-43bc-8c02-a6d4000382da"],
+Cell[2775, 84, 783, 20, 46, "Input", "ExpressionUUID" -> \
+"208763a9-a39f-4d34-955d-f15f48efeed5"],
+Cell[3561, 106, 240, 6, 135, "Text", "ExpressionUUID" -> \
+"263bb9d8-0f20-4d2c-8e9b-c946f0a6b807"],
+Cell[3804, 114, 1434, 31, 323, "Text", "ExpressionUUID" -> \
+"cc8feddf-dfaf-46b5-b682-f418c7d792c5"],
+Cell[5241, 147, 291, 5, 32, "Input", "ExpressionUUID" -> \
+"3bb33b51-e346-4f15-ac3e-85ffea93f63d"],
+Cell[5535, 154, 128, 2, 33, "Text", "ExpressionUUID" -> \
+"b1694258-0af5-463e-8b37-54e67e96f632"],
+Cell[5666, 158, 206, 3, 33, "Input", "ExpressionUUID" -> \
+"5ccc0378-251f-413c-97b5-402f67640cfe"],
+Cell[5875, 163, 1250, 44, 32, "Text", "ExpressionUUID" -> \
+"88fd97e1-eccd-444d-b3c3-ab4a5505bcb5"],
+Cell[7128, 209, 171, 3, 32, "Input", "ExpressionUUID" -> \
+"240b8538-aaae-4e8b-81f5-c4422a9d89ab"],
+Cell[7302, 214, 324, 6, 55, "Text", "ExpressionUUID" -> \
+"a1642d2a-6b0c-4a39-936f-0e0de8dd4300"],
+Cell[7629, 222, 783, 20, 53, "Input", "ExpressionUUID" -> \
+"aa4325ae-9fd7-4c91-a431-8e85ebdcd974"],
+Cell[8415, 244, 565, 11, 55, "Text", "ExpressionUUID" -> \
+"577f6145-fd9c-46a5-9c56-58e9329d512b"],
+Cell[8983, 257, 1012, 24, 53, "Input", "ExpressionUUID" -> \
+"9ba526b1-faaa-469e-aa58-f3f7bf0a17e7"],
+Cell[9998, 283, 128, 2, 33, "Text", "ExpressionUUID" -> \
+"b2799cb0-1508-47ab-afca-aec913a786d8"],
+Cell[10129, 287, 159, 2, 32, "Input", "ExpressionUUID" -> \
+"34e1b2b5-91b3-4e71-8705-2f0522116ea3"],
+Cell[10291, 291, 778, 17, 51, "Text", "ExpressionUUID" -> \
+"ef843309-addd-450a-8005-1c5a02868522"],
+Cell[11072, 310, 1063, 20, 73, "Input", "ExpressionUUID" -> \
+"b1f2c629-7bed-49c1-a5c7-684acdefa2e8"],
+Cell[12138, 332, 690, 21, 99, "Text", "ExpressionUUID" -> \
+"501959b5-5bb1-4f8d-b76f-a745989130e5"],
+Cell[12831, 355, 1077, 29, 53, "Input", "ExpressionUUID" -> \
+"14bcccef-6aaf-4330-a390-8ddfaef397a1"],
+Cell[13911, 386, 176, 4, 33, "Text", "ExpressionUUID" -> \
+"0fe4c4f3-a0cc-4882-970d-52f9bf7ad543"],
+Cell[14090, 392, 1122, 31, 73, "Input", "ExpressionUUID" -> \
+"89dcc2aa-c46c-464c-99d5-a117fba5b06c"],
+Cell[15215, 425, 859, 23, 58, "Text", "ExpressionUUID" -> \
+"760319ce-5390-49bb-b8f2-0e67420c58f4"],
+Cell[16077, 450, 302, 6, 32, "Input", "ExpressionUUID" -> \
+"c80e1a7e-34c6-4180-93b5-13e06970abd3"],
+Cell[16382, 458, 474, 8, 49, "Text", "ExpressionUUID" -> \
+"5b2b53d0-d909-4a65-a34d-43fb10208e1d"],
+Cell[16859, 468, 400, 8, 28, "Input", "ExpressionUUID" -> \
+"4306a32c-5c00-4189-8f7a-48ee3cac43ec"],
+Cell[17262, 478, 808, 18, 99, "Text", "ExpressionUUID" -> \
+"726fb744-32e3-435f-aa72-791d5dbf8796"],
+Cell[18073, 498, 1664, 47, 93, "Input", "ExpressionUUID" -> \
+"7e281a1b-fec5-4f2a-b11e-7032066ecd2d"],
+Cell[19740, 547, 618, 15, 113, "Input", "ExpressionUUID" -> \
+"bd8fed5a-1bce-42b6-b607-72ef6187b828"],
+Cell[20361, 564, 1803, 46, 153, "Input", "ExpressionUUID" -> \
+"24cee59e-1971-4297-93ff-c608fe49daf6"],
+Cell[22167, 612, 266, 4, 33, "Text", "ExpressionUUID" -> \
+"22d0c02a-c51f-489b-95a0-0245208ed7ca"],
+Cell[22436, 618, 1001, 27, 538, "Text", "ExpressionUUID" -> \
+"e5cd819d-2d90-4f9c-af4e-71607788019b"]
+}, Closed]]
+}
+]
+*)
+
